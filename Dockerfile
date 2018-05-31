@@ -13,6 +13,8 @@ RUN set -xe && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0C54D189
 
 COPY entrypoint.sh /
 
+RUN chmod +x /entrypoint.sh
+
 VOLUME /etc/loolwsd/
  
 USER lool 
