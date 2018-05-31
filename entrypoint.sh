@@ -26,4 +26,4 @@ fi
 #su - lool -c "/usr/bin/loolwsd --version --disable-ssl  --o:logging.level=trace --o:storage.filesystem[@allow]=true --o:sys_template_path=/opt/lool/systemplate --o:lo_template_path=/opt/collaboraoffice5.3 --o:child_root_path=/opt/lool/child-roots --o:file_server_root_path=/usr/share/loolwsd --o:admin_console.username=admin --o:admin_console.password=admin"
 
 
-su -c "/usr/bin/loolwsd --version --disable-ssl  --o:logging.level=trace --o:storage.filesystem[@allow]=true --o:sys_template_path=/opt/lool/systemplate --o:lo_template_path=/opt/collaboraoffice5.3 --o:child_root_path=/opt/lool/child-roots --o:file_server_root_path=/usr/share/loolwsd --o:admin_console.username=admin --o:admin_console.password=admin" -s /bin/bash lool
+su -c "/usr/bin/loolwsd --version  --o:storage.filesystem[@allow]=true --o:sys_template_path=/opt/lool/systemplate --o:lo_template_path=/opt/collaboraoffice5.3 --o:child_root_path=/opt/lool/child-roots --o:file_server_root_path=/usr/share/loolwsd --o:admin_console.username=admin --o:admin_console.password=admin" -s /bin/bash lool
