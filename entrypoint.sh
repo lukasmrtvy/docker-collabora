@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if test "${DONT_GEN_SSL_CERT-set}" == set; then
 # Generate new SSL certificate instead of using the default
