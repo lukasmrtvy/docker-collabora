@@ -20,3 +20,5 @@ if test "${DONT_GEN_SSL_CERT-set}" == set; then
   mv certs/servers/localhost/cert.pem /etc/loolwsd/cert.pem
   mv certs/ca/root.crt.pem /etc/loolwsd/ca-chain.cert.pem
 fi
+
+exec $@
