@@ -19,7 +19,7 @@ VOLUME /etc/loolwsd/
 
 EXPOSE 9980
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT /entrypoint.sh
 
 #USER lool 
 
