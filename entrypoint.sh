@@ -19,6 +19,7 @@ openssl x509 -req -in certs/tmp/localhost.csr.pem -CA certs/ca/root.crt.pem -CAk
 mv certs/servers/localhost/privkey.pem /etc/loolwsd/key.pem
 mv certs/servers/localhost/cert.pem /etc/loolwsd/cert.pem
 mv certs/ca/root.crt.pem /etc/loolwsd/ca-chain.cert.pem
+chown -R lool: /etc/loolwsd/
 fi
 
 #exec "$@"
