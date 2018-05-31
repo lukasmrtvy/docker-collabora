@@ -9,7 +9,7 @@ RUN set -xe && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0C54D189
     apt-get update && apt-get install -y loolwsd=${COLLABORA_VERSION} code-brand
 
 # disable SSL
-RUN sed -i  "s/<enable type=\"bool\" default=\"true\">true<\/enable>/<enable type=\"bool\" default=\"true\">false<\/enable>/g"  /etc/loolwsd/loolwsd.xml
+#RUN sed -i  "s/<enable type=\"bool\" default=\"true\">true<\/enable>/<enable type=\"bool\" default=\"true\">false<\/enable>/g"  /etc/loolwsd/loolwsd.xml
 
 VOLUME /etc/loolwsd/
  
@@ -17,4 +17,4 @@ USER lool
 
 EXPOSE 9980
 
-CMD /usr/bin/loolwsd --version --o:sys_template_path=/opt/lool/systemplate --o:lo_template_path=/opt/collaboraoffice5.3 --o:child_root_path=/opt/lool/child-roots --o:file_server_root_path=/usr/share/loolwsd --o:admin_console.username=admin --o:admin_console.password=admin
+CMD /usr/bin/loolwsd --version --disable-ssl --o:sys_template_path=/opt/lool/systemplate --o:lo_template_path=/opt/collaboraoffice5.3 --o:child_root_path=/opt/lool/child-roots --o:file_server_root_path=/usr/share/loolwsd --o:admin_console.username=admin --o:admin_console.password=admin
